@@ -1,0 +1,8 @@
+{
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@octokit/graphql": "^7.0.2",
+    "dotenv": "^16.4.5"
+  }
+} 
