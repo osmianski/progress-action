@@ -1,13 +1,11 @@
 import { graphql } from "@octokit/graphql";
 import 'dotenv/config';
-import { writeFile } from 'fs/promises';
-import { join } from 'path';
+
+const owner = process.env.OWNER;
+const repo = process.env.REPO;
+const number = process.env.ISSUE_NUMBER;
 
 await (async function() {
-    const owner = 'osmianski';
-    const repo = 'hobby-projects';
-    const number = 8;
-    
     const github = graphql.defaults({
         headers: {
             authorization: `Bearer ${process.env.GITHUB_TOKEN}`
@@ -71,7 +69,7 @@ await (async function() {
     `);
 
     const progressField = project.fields.nodes.find(field => field.name === 'Progress');
-    
+
     if (!progressField) {
         throw new Error("'Progress' field not found");
     }
