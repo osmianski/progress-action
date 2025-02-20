@@ -8,6 +8,7 @@ Before you begin, ensure you have the following installed:
 
 - Node.js (v18 or higher)
 - npm (Node Package Manager)
+- A GitHub account and personal access token
 
 ## Installation
 
@@ -23,6 +24,14 @@ Before you begin, ensure you have the following installed:
     ```bash
     npm install
     ```
+
+3. Set up environment variables:
+
+    ```bash
+    cp .env.example .env
+    ```
+
+    Then edit the `.env` file and fill in the required variables.
 
 ## Running the Project
 
